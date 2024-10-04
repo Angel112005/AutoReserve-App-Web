@@ -1,0 +1,16 @@
+<p>vehiculos-section works!</p>
+
+<div class="vehiculos-section">
+  <h2>Gestión de Vehículos</h2>
+
+  <!-- Formulario de vehículos -->
+  <app-vehiculo-form
+    [vehiculo]="vehiculoSeleccionado"
+    (vehiculoGuardado)="vehiculoGuardado()">
+  </app-vehiculo-form>
+
+  <!-- Lista de vehículos -->
+  <app-vehiculo-list
+    (editarVehiculo)="editarVehiculo($event)">
+  </app-vehiculo-list>
+</div>

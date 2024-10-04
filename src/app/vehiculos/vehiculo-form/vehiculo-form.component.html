@@ -1,1 +1,25 @@
 <p>vehiculo-form works!</p>
+<div id="form">
+  <form (ngSubmit)="guardarVehiculo()">
+    <label for="marca">Marca</label>
+    <input type="text" id="marca" [(ngModel)]="vehiculo.marca" name="marca">
+
+    <label for="modelo">Modelo</label>
+    <input type="text" id="modelo" [(ngModel)]="vehiculo.modelo" name="modelo">
+
+    <label for="generacion">Generacion</label>
+    <input type="number" id="generacion" [(ngModel)]="vehiculo.generacion" name="generacion">
+
+    <label for="matricula">Matricula</label>
+    <input type="text" id="matricula" [(ngModel)]="vehiculo.matricula" name="matricula">
+
+    <label for="tipo">Tipo</label>
+    <input type="text" id="tipo" [(ngModel)]="vehiculo.tipo" name="tipo">
+
+    <label for="estado">Estado</label>
+    <input type="text" id="estado" [(ngModel)]="vehiculo.estado" name="estado">
+
+    <button type="submit">{{ vehiculo.id ? 'Actualizar' : 'Agregar' }} Vehículo</button>
+    <button type="button" (click)="resetForm()">Cancelar</button>
+  </form>
+</div>

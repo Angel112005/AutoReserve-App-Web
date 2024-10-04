@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import { Cliente } from './clientes/models/cliente';
+import { Cliente } from '../models/cliente';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  selector: 'app-clientes-section',
+  templateUrl: './clientes-section.component.html',
+  styleUrl: './clientes-section.component.css'
 })
-export class AppComponent {
-  title = 'autoReserve_App';
+export class ClientesSectionComponent {
 
   clienteSeleccionado: Cliente = {
     id: 0,

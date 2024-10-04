@@ -1,1 +1,33 @@
 <p>vehiculo-list works!</p>
+
+<h3>Lista de Vehículos</h3>
+
+<div id="table_cars">
+  <table>
+    <thead>
+      <tr>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Generacion</th>
+        <th>Matricula</th>
+        <th>Tipo</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vehiculo of vehiculos">
+        <td>{{ vehiculo.marca }}</td>
+        <td>{{ vehiculo.modelo }}</td>
+        <td>{{ vehiculo.generacion }}</td>
+        <td>{{ vehiculo.matricula }}</td>
+        <td>{{ vehiculo.tipo }}</td>
+        <td>{{ vehiculo.estado }}</td>
+        <td>
+          <button (click)="seleccionarVehiculo(vehiculo)">Editar</button>
+          <button (click)="eliminarVehiculo(vehiculo.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

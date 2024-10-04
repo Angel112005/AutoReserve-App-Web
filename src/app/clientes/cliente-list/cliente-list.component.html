@@ -1,1 +1,31 @@
-<p>cliente-list works!</p>
+<div id="table_users">
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Correo</th>
+        <th>Teléfono</th>
+        <th>Dirección</th>
+        <th>Licencia</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cliente of clientes">
+        <td>{{ cliente.nombre }}</td>
+        <td>{{ cliente.apellido }}</td>
+        <td>{{ cliente.correo }}</td>
+        <td>{{ cliente.telefono }}</td>
+        <td>{{ cliente.direccion }}</td>
+        <td>{{ cliente.licencia }}</td>
+        <td>
+          <button (click)="seleccionarCliente(cliente)">Editar</button>
+          <button (click)="eliminarCliente(cliente.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<!-- <a [routerLink]="['/clientes/nuevo']">Agregar Cliente</a> -->
